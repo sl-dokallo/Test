@@ -1,0 +1,18 @@
+#!/bin/bash
+cp -r $(pwd)/python3 /usr/local/
+ln -s /usr/local/python3/bin/python3 /usr/local/bin/python3
+ln -s /usr/local/python3/bin/pip3 /usr/local/bin/pip3
+echo "install python3 complete!"
+python3 --version
+pip3 --version
+
+
+cp -r $(pwd)/python2.6 /usr/lib/
+echo "install python complete!"
+
+
+mkdir /mnt/data/remote/liveData
+
+mkdir /mnt/data/local-disk2-ssd
+
+mount //172.17.228.6/LiveData /mnt/data/remote/liveData/ -o user=user,password=user
